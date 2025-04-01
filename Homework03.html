@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>Circle-Line Intersection In-Canvas Text</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background-color: #cccccc;
+      font-family: sans-serif;
+      position: relative;
+      /* 페이지 전체 배경 */
+    }
+    /* 메인 WebGL 캔버스 */
+    #glCanvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #333333;
+      cursor: crosshair;
+      width: 700px;
+      height: 700px;
+      /* 실제 HTML 속성(700×700)도 명시 필요 */
+    }
+    /* 오버레이 캔버스 (동일크기, 투명 배경) */
+    #overlayCanvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none; /* 마우스 입력은 통과시킴 */
+      width: 700px;
+      height: 700px;
+      /* 실제 HTML 속성(700×700)도 명시 필요 */
+      z-index: 1; /* WebGL 캔버스 위에 표시 */
+    }
+  </style>
+</head>
+<body>
+  <!-- WebGL용 캔버스 -->
+  <canvas id="glCanvas" width="700" height="700"></canvas>
+
+  <!-- 2D로 텍스트 표시할 오버레이 캔버스 -->
+  <canvas id="overlayCanvas" width="700" height="700"></canvas>
+
+  <!-- 스크립트들 -->
+  <script type="module" src="./shader.js"></script>
+  <script type="module" src="./Homework03.js"></script>
+</body>
+</html>
