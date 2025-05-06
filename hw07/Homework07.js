@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
- * Homework07.js ‑ Cone + Lamp with Arcball (약 240 lines)
+ * Homework07.js ‑ Cone + Lamp with Arcball
  * ------------------------------------------------------------------ */
 import { resizeAspectRatio, setupText, updateText } from './util/util.js';
 import { Shader, readShaderFile } from './util/shader.js';
